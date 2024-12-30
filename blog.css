@@ -1,0 +1,259 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f4f1;
+}
+
+/* Header */
+header {
+    background-color: #d84a8a;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+/* Menu para Desktop */
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ffd700;
+}
+
+/* Menu Hambúrguer */
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #d84a8a;
+        text-align: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .menu-hamburger {
+        display: flex;
+    }
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('img/hero-background.png');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    color: white;
+    text-align: left; 
+    padding: 20px 40px; 
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    font-family: 'Great Vibes', cursive;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Seção Blog */
+.blog-section {
+    padding: 50px 0;
+    background-color: #f7f0eb;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-basis: 30%;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.blog-post h2 {
+    font-size: 1.8em;
+    color: #a85d44;
+    margin: 20px 0;
+}
+
+.blog-post p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-post .btn {
+    background-color: #d84a8a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.blog-post .btn:hover {
+    background-color: #f4a261;
+}
+
+/* Footer */
+footer {
+    background-color: #d84a8a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo a {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social .social-icon {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    color: #ffd700;
+}
+
+
+.fa-facebook-f, .fa-instagram, .fa-twitter {
+    font-size: 1.5em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-post {
+        flex-basis: 100%;
+        max-width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+}
